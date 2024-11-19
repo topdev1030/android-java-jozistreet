@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/margin_20"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/margin_15"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/TextStyleLargeRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Street Food Fair Booking"
+            android:textColor="@color/grey_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/formBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_20"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- Name Field -->
+            <LinearLayout
+                android:id="@+id/lytName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="Name"
+                            android:inputType="text"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Surname Field -->
+            <LinearLayout
+                android:id="@+id/lytSurName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtSurName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="SurName"
+                            android:inputType="text"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Email Field -->
+            <LinearLayout
+                android:id="@+id/lytEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="Email"
+                            android:inputType="phone"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Phone Field -->
+            <LinearLayout
+                android:id="@+id/lytPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="Phone"
+                            android:inputType="phone|number"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Stall Name Field -->
+            <LinearLayout
+                android:id="@+id/lytStallName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtStallName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="Stall Name"
+                            android:inputType="text"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Number of Stall Field -->
+            <LinearLayout
+                android:id="@+id/lytStallNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtStallNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="Number of Stalls"
+                            android:inputType="numberDecimal"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Products Field -->
+            <LinearLayout
+                android:id="@+id/lytProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtProducts"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="Products"
+                            android:inputType="text"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Services Field -->
+            <LinearLayout
+                android:id="@+id/lytServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/EditTextStyle"
+                        app:boxCornerRadiusBottomEnd="@dimen/margin_10"
+                        app:boxCornerRadiusBottomStart="@dimen/margin_10"
+                        app:boxCornerRadiusTopEnd="@dimen/margin_10"
+                        app:boxCornerRadiusTopStart="@dimen/margin_10"
+                        app:boxStrokeColor="@color/black_color"
+                        app:boxStrokeWidthFocused="@dimen/pixel_4"
+                        app:hintTextColor="@color/grey_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtServices"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_45"
+                            android:hint="Services"
+                            android:inputType="text"
+                            android:importantForAutofill="no"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_12"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_12"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="@dimen/text_14" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_30"
+        app:layout_constraintTop_toBottomOf="@id/formBody">
+        <LinearLayout
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:gravity="center"
+            android:elevation="@dimen/margin_1"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/bk_blue_rect_10">
+            <TextView
+                style="@style/TextStyleNormalRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_12"
+                android:gravity="center"
+                android:textColor="@color/white_color"
+                android:text="Pay Now"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
